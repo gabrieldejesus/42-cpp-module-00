@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
+/*   By: gde-jesu <gde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 17:41:06 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/08/23 09:59:09 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/08/23 11:30:57 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,15 @@ class Contact {
 
 		static void showData(Contact InstanceContact)
 		{
-			std::cout << InstanceContact.firstName << std::endl;
-			std::cout << InstanceContact.lastName << std::endl;
-			std::cout << InstanceContact.nickname << std::endl;
-			std::cout << InstanceContact.phoneNumber << std::endl;
-			std::cout << InstanceContact.darkestSecret << std::endl;
+			std::cout << "first name:" << InstanceContact.firstName << std::endl;
+			std::cout << "last name: " << InstanceContact.lastName << std::endl;
+			std::cout << "nickname: " << InstanceContact.nickname << std::endl;
+			std::cout << "phone number: " << InstanceContact.phoneNumber << std::endl;
+			std::cout << "darkest secret: " << InstanceContact.darkestSecret << std::endl;
 		}
 
 		Contact(void);
 		~Contact(void);
 };
 
+#endif
