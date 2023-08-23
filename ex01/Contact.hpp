@@ -6,7 +6,7 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 17:41:06 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/08/21 11:34:12 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/08/23 09:59:09 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,36 @@ class Contact {
 		std::string nickname;
 		std::string phoneNumber;
 		std::string darkestSecret;
-		
+
 		static Contact getData()
 		{
 			Contact InstanceContact;
-
-			std::cout << "Type the contact first name:" << std::endl;
-			getline(std::cin, InstanceContact.firstName);
-		
-			std::cout << "Type the contact last name:" << std::endl;
-			getline(std::cin, InstanceContact.lastName);
-
-			std::cout << "Type the contact nickname:" << std::endl;
-			getline(std::cin, InstanceContact.nickname);
-
-			std::cout << "Type the contact phone number:" << std::endl;
-			getline(std::cin, InstanceContact.phoneNumber);
-
-			std::cout << "Type the contact darkest secret:" << std::endl;
-			getline(std::cin, InstanceContact.darkestSecret);
-
+			
+			while (InstanceContact.firstName.empty())
+			{
+				std::cout << "Type the contact first name:" << std::endl;
+				getline(std::cin, InstanceContact.firstName);
+			}
+			while (InstanceContact.lastName.empty())
+			{
+				std::cout << "Type the contact last name:" << std::endl;
+				getline(std::cin, InstanceContact.lastName);
+			}
+			while (InstanceContact.nickname.empty())
+			{
+				std::cout << "Type the contact nickname:" << std::endl;
+				getline(std::cin, InstanceContact.nickname);
+			}
+			while (InstanceContact.phoneNumber.empty())
+			{
+				std::cout << "Type the contact phone number:" << std::endl;
+				getline(std::cin, InstanceContact.phoneNumber);
+			}
+			while (InstanceContact.darkestSecret.empty())
+			{	
+				std::cout << "Type the contact darkest secret:" << std::endl;
+				getline(std::cin, InstanceContact.darkestSecret);
+			}
 			return InstanceContact;
 		}
 
@@ -58,4 +68,3 @@ class Contact {
 		~Contact(void);
 };
 
-#endif
