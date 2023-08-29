@@ -6,7 +6,7 @@
 /*   By: gde-jesu <gde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 19:02:07 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/08/23 16:11:58 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/08/29 10:48:27 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,23 @@ void	add_contact(int &contacts, int oldest_contact, PhoneBook &InstancePhoneBook
 
 void	search_contact(int &contacts, PhoneBook &InstancePhoneBook)
 {
-	int	counter = 0;
+	int	index = 0;
 
-	while (counter < contacts)
+
+	std::cout << std::left << std::setw(10) << (InstancePhoneBook.InstanceContact[index].firstName.length() > 10 ? InstancePhoneBook.InstanceContact[index].firstName.substr(0, 10) + "." : InstancePhoneBook.InstanceContact[index].firstName) << std::endl;
+    
+	std::cout << "+-------------------------------------------+" << std::endl;
+	std::cout << "| " << "index" << " | " << "first name" << " | " << "last name" << " | " << "nickname" << " |" << std::endl;
+	std::cout << "+-------------------------------------------+" << std::endl;
+	while (index < contacts)
 	{
-		std::cout << "+-----------------------------------------------------------+" << std::endl;
-		std::cout << "| index:" << counter<< std::endl;
-		std::cout << "| first name: " << InstancePhoneBook.InstanceContact[counter].firstName << std::endl;
-		std::cout << "| last name: " << InstancePhoneBook.InstanceContact[counter].lastName << std::endl;
-		std::cout << "| nickname: " << InstancePhoneBook.InstanceContact[counter].nickname << std::endl;
-		std::cout << "| phone number: " << InstancePhoneBook.InstanceContact[counter].phoneNumber << std::endl;
-		std::cout << "| darkest secret: " << InstancePhoneBook.InstanceContact[counter].darkestSecret << std::endl;
-		std::cout << "+-----------------------------------------------------------+" << std::endl;
-		counter++;
+		std::cout << "| " << index << " | ";
+		std::cout << InstancePhoneBook.InstanceContact[index].firstName << " | ";
+		std::cout << InstancePhoneBook.InstanceContact[index].lastName << " | ";
+		std::cout << InstancePhoneBook.InstanceContact[index].nickname << " |" << std::endl;
+		index++;
 	}
+	std::cout << "+-------------------------------------------+" << std::endl;
 }
 
 int	main()
