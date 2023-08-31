@@ -30,8 +30,6 @@ int main(int argc, char *argv[])
 			y++;
 		}
 		std::cout << std::endl;
-		if (argv[x + 1])
-			std::cout << " ";
 		x++;
 	}
 	return (0);

@@ -14,6 +14,7 @@
 # define CONTACT_HPP
 
 #include <iostream>
+#include <string>
 
 class Contact {
 	public:
@@ -23,7 +24,7 @@ class Contact {
 		std::string phoneNumber;
 		std::string darkestSecret;
 
-		static Contact getData()
+		static Contact createContact()
 		{
 			Contact InstanceContact;
 			
@@ -53,15 +54,6 @@ class Contact {
 				getline(std::cin, InstanceContact.darkestSecret);
 			}
 			return InstanceContact;
-		}
-
-		static void showData(Contact InstanceContact)
-		{
-			std::cout << "first name:" << InstanceContact.firstName << std::endl;
-			std::cout << "last name: " << InstanceContact.lastName << std::endl;
-			std::cout << "nickname: " << InstanceContact.nickname << std::endl;
-			std::cout << "phone number: " << InstanceContact.phoneNumber << std::endl;
-			std::cout << "darkest secret: " << InstanceContact.darkestSecret << std::endl;
 		}
 
 		Contact(void);

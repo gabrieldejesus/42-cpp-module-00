@@ -6,22 +6,21 @@
 /*   By: gde-jesu <gde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 19:02:07 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/08/29 10:48:27 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/08/31 16:38:31 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
+#include "DisplayInfo.hpp"
 
 void	add_contact(int &contacts, int oldest_contact, PhoneBook &InstancePhoneBook)
 {
 	if (contacts <= 7)
 	{
-		InstancePhoneBook.InstanceContact[contacts] = Contact::getData();
+		InstancePhoneBook.InstanceContact[contacts] = Contact::createContact();
 		contacts++;
 	} else
 	{
-		InstancePhoneBook.InstanceContact[oldest_contact] = Contact::getData();
+		InstancePhoneBook.InstanceContact[oldest_contact] = Contact::createContact();
 		oldest_contact++;
 		if (oldest_contact % 8 == 0)
 			oldest_contact = 0;
@@ -31,22 +30,31 @@ void	add_contact(int &contacts, int oldest_contact, PhoneBook &InstancePhoneBook
 void	search_contact(int &contacts, PhoneBook &InstancePhoneBook)
 {
 	int	index = 0;
+  std::string index_selected;
 
+  if (contacts == 0)
+  {
+    std::cout << "No contacts saved, please ADD a contact before searching." << std::endl;
+    return;
+  }
+  
+  display_contacts(index, contacts, InstancePhoneBook);
 
-	std::cout << std::left << std::setw(10) << (InstancePhoneBook.InstanceContact[index].firstName.length() > 10 ? InstancePhoneBook.InstanceContact[index].firstName.substr(0, 10) + "." : InstancePhoneBook.InstanceContact[index].firstName) << std::endl;
-    
-	std::cout << "+-------------------------------------------+" << std::endl;
-	std::cout << "| " << "index" << " | " << "first name" << " | " << "last name" << " | " << "nickname" << " |" << std::endl;
-	std::cout << "+-------------------------------------------+" << std::endl;
-	while (index < contacts)
-	{
-		std::cout << "| " << index << " | ";
-		std::cout << InstancePhoneBook.InstanceContact[index].firstName << " | ";
-		std::cout << InstancePhoneBook.InstanceContact[index].lastName << " | ";
-		std::cout << InstancePhoneBook.InstanceContact[index].nickname << " |" << std::endl;
-		index++;
-	}
-	std::cout << "+-------------------------------------------+" << std::endl;
+  std::cout << "Enter the index of the contact you want to see or digit BACK to return to list of commands." << std::endl;
+  getline(std::cin, index_selected);
+
+  while (index_selected.size() != 1 ||
+    index_selected.empty() ||
+		index_selected.find_first_not_of("0123456789") != std::string::npos ||
+    atoi(index_selected.c_str()) >= contacts
+  )
+  {
+    if (index_selected == "BACK")
+      return;
+    std::cout << "Wrong index, please digit a valid index or digit BACK to return to list of commands." << std::endl;
+    getline(std::cin, index_selected);
+  }
+  display_contact(atoi(index_selected.c_str()), InstancePhoneBook);
 }
 
 int	main()
