@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gde-jesu <gde-jesu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 17:23:36 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/08/23 13:16:14 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/01 18:39:22 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 PhoneBook::PhoneBook(void)
 {
-	std::cout << "\e[1;42m⚡ Constructor\e[0m PhoneBook called!" << std::endl;
+	std::cout << "Constructor PhoneBook called!" << std::endl;
 }
 
 PhoneBook::~PhoneBook(void)
 {
-	std::cout << "\e[1;31m⚡ Destructor\e[0m PhoneBook called!" << std::endl;
+	std::cout << "Destructor PhoneBook called!" << std::endl;
 }
