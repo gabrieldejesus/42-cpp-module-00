@@ -1,6 +1,6 @@
 # CPP Module 00
 
-This first module of C++ is designed to help you understand the specifities of the language when compared to C. Time to dive into Object Oriented Programming!
+This first module of C++ is designed to help you understand the specifities of the language when compared to C.
 
 ## Skills
 
@@ -27,6 +27,8 @@ $>./megaphone
 * LOUD AND UNBEARABLE FEEDBACK NOISE *
 $>
 ```
+
+---
 
 #### Exercise 01: My Awesome PhoneBook
 
