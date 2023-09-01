@@ -4,7 +4,6 @@ This first module of C++ is designed to help you understand the specifities of t
 
 ## Skills
 
-- Rigor
 - Object-oriented programming
 - Imperative programming
 
