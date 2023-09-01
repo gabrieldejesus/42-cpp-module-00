@@ -29,9 +29,9 @@ $>
 
 #### Exercise 01: My Awesome PhoneBook
 
-| Turn-in directory | Files to turn in            | Forbidden functions |
-| ----------------- | --------------------------- | ------------------- |
-| ex01/             | Makefile, _.cpp, _.{h, hpp} | None                |
+| Turn-in directory | Files to turn in              | Forbidden functions |
+| ----------------- | ----------------------------- | ------------------- |
+| ex01/             | Makefile, \*.cpp, \*.{h, hpp} | None                |
 
 Write a program that behaves like a crappy awesome phonebook software.
 You have to implement two classes:
