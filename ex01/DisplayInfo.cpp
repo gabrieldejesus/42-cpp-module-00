@@ -6,11 +6,11 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 18:36:31 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/09/01 18:36:33 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/02 16:57:04 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DisplayInfo.hpp"
+# include "DisplayInfo.hpp"
 
 void print_contact_line(std::string str, bool full = false)
 {

@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gde-jesu <gde-jesu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 17:41:06 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/08/23 11:30:57 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/02 18:28:05 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
 
 class Contact {
 	public:
-		std::string firstName;
+    Contact(void);
+    std::string firstName;
 		std::string lastName;
 		std::string nickname;
 		std::string phoneNumber;
 		std::string darkestSecret;
-
 		static Contact createContact()
 		{
 			Contact InstanceContact;
@@ -55,8 +55,6 @@ class Contact {
 			}
 			return InstanceContact;
 		}
-
-		Contact(void);
 		~Contact(void);
 };
 
