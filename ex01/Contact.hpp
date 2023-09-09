@@ -6,7 +6,7 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 17:41:06 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/09/09 19:56:30 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/09 20:26:58 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define CONTACT_HPP
 
 # include <iostream>
-# include <string>
 	
 class Contact {
 	private:

@@ -6,16 +6,12 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 16:40:20 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/09/09 20:08:51 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/09 20:27:34 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
-
-# include <iostream>
-# include <iomanip>
-# include <cstdlib>
 
 # include "Contact.hpp"
 
