@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Main.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 18:37:43 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/09/02 16:56:58 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/09 15:24:41 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	search_contact(int &contacts, PhoneBook &InstancePhoneBook)
   while (index_selected.size() != 1 ||
     index_selected.empty() ||
 		index_selected.find_first_not_of("0123456789") != std::string::npos ||
-    atoi(index_selected.c_str()) >= contacts
+    std::atof(index_selected.c_str()) >= contacts
   )
   {
     if (index_selected == "BACK")
@@ -54,7 +54,7 @@ void	search_contact(int &contacts, PhoneBook &InstancePhoneBook)
     std::cout << "Wrong index, please digit a valid index or digit BACK to return to list of commands." << std::endl;
     getline(std::cin, index_selected);
   }
-  display_contact(atoi(index_selected.c_str()), InstancePhoneBook);
+  display_contact(std::atof(index_selected.c_str()), InstancePhoneBook);
 }
 
 int	main()

@@ -6,7 +6,7 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 18:36:31 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/09/02 16:57:04 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/09 15:44:59 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,29 @@ int take_largest_size(int values[5])
   return largest;
 }
 
+std::string intToString(int number) {
+  std::string result;
+  
+  if (number == 0)
+    result = "0";
+  else {
+    bool isNegative = false;
+    if (number < 0) {
+	  isNegative = true;
+      number = -number;
+    }
+    while (number > 0)
+	{
+	  char digit = '0' + (number % 10);
+	  result = digit + result;
+      number /= 10;
+    }
+    if (isNegative)
+	  result = "-" + result;
+  }
+  return result;
+}
+
 void display_contacts(int index, int &contacts, PhoneBook &InstancePhoneBook) {
   std::cout << "+---------------------------------------------------+" << std::endl;
   std::cout << "| ";
@@ -43,18 +66,18 @@ void display_contacts(int index, int &contacts, PhoneBook &InstancePhoneBook) {
   print_contact_line("last name");
   print_contact_line("nickname");
   std::cout << std::endl;
-	std::cout << "+---------------------------------------------------+" << std::endl;
+  std::cout << "+---------------------------------------------------+" << std::endl;
   while (index < contacts)
   {
     std::cout << "| ";
-    print_contact_line(std::to_string(index));
+    print_contact_line(intToString(index));
     print_contact_line(InstancePhoneBook.InstanceContact[index].firstName);
     print_contact_line(InstancePhoneBook.InstanceContact[index].lastName);
     print_contact_line(InstancePhoneBook.InstanceContact[index].nickname);
     std::cout << std::endl;
     index++;
   }
-	std::cout << "+---------------------------------------------------+" << std::endl;
+  std::cout << "+---------------------------------------------------+" << std::endl;
 }
 
 void display_contact(int index, PhoneBook &InstancePhoneBook) {
@@ -71,7 +94,7 @@ void display_contact(int index, PhoneBook &InstancePhoneBook) {
 
   int largest_size = take_largest_size(values);
 
-	std::cout << "+-------------------";
+  std::cout << "+-------------------";
   while (largest_size > keep_1)
   {
     std::cout << "-";
@@ -84,7 +107,7 @@ void display_contact(int index, PhoneBook &InstancePhoneBook) {
   std::cout << "| nickname       | " << std::right << std::setw(largest_size) << InstancePhoneBook.InstanceContact[index].nickname << " |" << std::endl;
   std::cout << "| phone number   | " << std::right << std::setw(largest_size) << InstancePhoneBook.InstanceContact[index].phoneNumber << " |" << std::endl;
   std::cout << "| darkest secret | " << std::right << std::setw(largest_size) << InstancePhoneBook.InstanceContact[index].darkestSecret << " |" << std::endl;
-	std::cout << "+-------------------";
+  std::cout << "+-------------------";
   while (largest_size > keep_2)
   {
     std::cout << "-";

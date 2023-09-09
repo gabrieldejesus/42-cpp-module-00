@@ -6,12 +6,12 @@
 #    By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/01 18:36:49 by gde-jesu          #+#    #+#              #
-#    Updated: 2023/09/01 18:36:49 by gde-jesu         ###   ########.fr        #
+#    Updated: 2023/09/09 15:37:32 by gde-jesu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Library Name #
-NAME		= phonebook
+NAME		= 	PhoneBook
 
 # CPP Variables #
 SRCS 		= *.cpp
