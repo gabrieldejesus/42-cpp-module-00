@@ -6,7 +6,7 @@
 #    By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/01 18:36:49 by gde-jesu          #+#    #+#              #
-#    Updated: 2023/09/09 18:55:01 by gde-jesu         ###   ########.fr        #
+#    Updated: 2023/09/09 19:03:57 by gde-jesu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,8 @@ RM 			= rm -f
 GREEN		= \e[32m
 YELLOW		= \e[33m
 RESET		= \e[0m
-_SUCCESS	= ✅ $(GREEN)PhoneBook Successfully compiled$(RESET)
-_INFO		= ℹ️ $(YELLOW)Info$(RESET)
+_SUCCESS	= ✨ $(GREEN)Compiled successfully$(RESET)
+_INFO		= 🚀 $(YELLOW)Info$(RESET)
 
 # Functions #
 all:		$(NAME)

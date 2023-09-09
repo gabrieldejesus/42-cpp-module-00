@@ -6,7 +6,7 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 17:41:06 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/09/02 18:28:05 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/09 19:56:30 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,47 +15,30 @@
 
 # include <iostream>
 # include <string>
-
+	
 class Contact {
+	private:
+		std::string _firstName;
+		std::string _lastName;
+		std::string _nickname;
+		std::string _phoneNumber;
+		std::string _darkestSecret;
+
 	public:
-    Contact(void);
-    std::string firstName;
-		std::string lastName;
-		std::string nickname;
-		std::string phoneNumber;
-		std::string darkestSecret;
-		static Contact createContact()
-		{
-			Contact InstanceContact;
-			
-			while (InstanceContact.firstName.empty())
-			{
-				std::cout << "Type the contact first name:" << std::endl;
-				getline(std::cin, InstanceContact.firstName);
-			}
-			while (InstanceContact.lastName.empty())
-			{
-				std::cout << "Type the contact last name:" << std::endl;
-				getline(std::cin, InstanceContact.lastName);
-			}
-			while (InstanceContact.nickname.empty())
-			{
-				std::cout << "Type the contact nickname:" << std::endl;
-				getline(std::cin, InstanceContact.nickname);
-			}
-			while (InstanceContact.phoneNumber.empty())
-			{
-				std::cout << "Type the contact phone number:" << std::endl;
-				getline(std::cin, InstanceContact.phoneNumber);
-			}
-			while (InstanceContact.darkestSecret.empty())
-			{	
-				std::cout << "Type the contact darkest secret:" << std::endl;
-				getline(std::cin, InstanceContact.darkestSecret);
-			}
-			return InstanceContact;
-		}
+    	Contact(void);
 		~Contact(void);
+
+		std::string getFirstName();
+		std::string getLastName();
+		std::string getNickname();
+		std::string getPhoneNumber();
+		std::string getDarkestSecret();
+
+		void setFirstName(std::string& firstName);
+		void setLastName(std::string& lastName);
+		void setNickname(std::string& nickname);
+		void setPhoneNumber(std::string& phoneNumber);
+		void setDarkestSecret(std::string& darkestSecret);
 };
 
 #endif

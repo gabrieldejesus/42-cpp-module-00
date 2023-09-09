@@ -6,7 +6,7 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 17:23:36 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/09/02 16:57:25 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/09 19:47:55 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,20 @@
 
 PhoneBook::PhoneBook(void)
 {
-	std::cout << "Constructor PhoneBook called!" << std::endl;
+	std::cout << "\e[32mConstructor\e[0m PhoneBook called!" << std::endl;
 }
 
 PhoneBook::~PhoneBook(void)
 {
-	std::cout << "Destructor PhoneBook called!" << std::endl;
+	std::cout << "\e[33mDestructor\e[0m PhoneBook called!" << std::endl;
+}
+
+void	PhoneBook::addContact()
+{
+	std::cout << "addContact()" << std::endl;
+}
+
+void	PhoneBook::listAllContacts()
+{
+	std::cout << "listAllContacts()" << std::endl;
 }
