@@ -6,7 +6,7 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 18:47:54 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/08/17 18:48:02 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/09 18:34:35 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,20 @@ int main(int argc, char *argv[])
 	}
 	
 	int x = 1;
+	
 	while (argv[x])
 	{
 		int y = 0;
+		
 		while (argv[x][y])
 		{	
 			std::cout << (char)toupper(argv[x][y]);
 			y++;
 		}
-		std::cout << std::endl;
 		x++;
 	}
+	
+	std::cout << std::endl;
+	
 	return (0);
 }

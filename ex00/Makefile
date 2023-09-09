@@ -6,7 +6,7 @@
 #    By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/01 18:29:51 by gde-jesu          #+#    #+#              #
-#    Updated: 2023/09/01 18:30:12 by gde-jesu         ###   ########.fr        #
+#    Updated: 2023/09/09 18:37:14 by gde-jesu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ SRCS 		= megaphone.cpp
 
 # Compiling Variables #
 CPP 		= c++
-OBJS 		= $(SRCS:.cpp=.o)
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 RM 			= rm -f
 
@@ -37,11 +36,10 @@ $(NAME):	$(SRCS)
 			@printf "$(_SUCCESS) is ready.\n"
 
 clean:
-			@$(RM) $(OBJS)
+			@$(RM) $(NAME)	
 			@printf "$(_INFO) cleaning done.\n"
 
-fclean:		clean
-			@$(RM) $(NAME)
+fclean: clean
 
 re: 		fclean all
 
