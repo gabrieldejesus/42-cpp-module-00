@@ -6,7 +6,7 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 17:41:06 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/09/09 20:26:58 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:13:30 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class Contact {
 	private:
 		std::string _firstName;
 		std::string _lastName;
-		std::string _nickname;
-		std::string _phoneNumber;
-		std::string _darkestSecret;
+		std::string	_nickname;
+		std::string	_phoneNumber;
+		std::string	_darkestSecret;
 
 	public:
     	Contact(void);
@@ -31,13 +31,13 @@ class Contact {
 		std::string getLastName();
 		std::string getNickname();
 		std::string getPhoneNumber();
-		std::string getDarkestSecret();
+		std::string	getDarkestSecret();
 
-		void setFirstName(std::string& firstName);
-		void setLastName(std::string& lastName);
-		void setNickname(std::string& nickname);
-		void setPhoneNumber(std::string& phoneNumber);
-		void setDarkestSecret(std::string& darkestSecret);
+		void		setFirstName(std::string firstName);
+		void		setLastName(std::string lastName);
+		void		setNickname(std::string nickname);
+		void		setPhoneNumber(std::string phoneNumber);
+		void		setDarkestSecret(std::string darkestSecret);
 };
 
 #endif
