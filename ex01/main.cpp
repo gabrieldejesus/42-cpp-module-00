@@ -6,7 +6,7 @@
 /*   By: gde-jesu <gde-jesu@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 18:37:43 by gde-jesu          #+#    #+#             */
-/*   Updated: 2023/09/13 16:58:46 by gde-jesu         ###   ########.fr       */
+/*   Updated: 2023/09/14 11:08:43 by gde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 int main()
 {
-	PhoneBook	Contacts;
+	PhoneBook	Agenda;
+	
 	std::string	command;
+	int			current_contact = 0;
+	int			oldest_contact = 0;
 
 	while (command.compare("EXIT"))
 	{
@@ -23,9 +26,9 @@ int main()
 		getline(std::cin, command);
 		
 		if (!command.compare("ADD"))
-			std::cout << "add contact" << std::endl;
+			Agenda.add_contact(Agenda, current_contact, oldest_contact);
 		else if (!command.compare("SEARCH"))
-			std::cout << "search contact" << std::endl;
+			Agenda.search_contact(current_contact, Agenda);
 		else
 			std::cout << "Wrong command, please digit a valid command!" << std::endl;
 	}
